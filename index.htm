@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html data-textdirection="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="description" content="Quran Acadamy Dashboard" />
+    <meta name="keywords"
+        content="Quaran Karam, Quaran online, Quaran learning, Quaran islamic learning, Quaran Acadmy, Acadmy to tech Quaran,Quaran Acadmy web site" />
+    <meta name="author" content="Sallam Rady">
+    <title> Quaran Acadmy </title>
+    <!-- Acadmy icons -->
+    <link rel="apple-touch-icon" href="Resources/images/icons/ico.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="Resources/images/icons/ico.jpg" />
+    <!--imprt font and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <!-- import bootstrap css file -->
+    <link rel="stylesheet" href="Resources/bootstrap/css/bootstrap.min.css" />
+    <!--import animate css file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Resources/css/animation/hover-min.css" />
+    <!-- import my custom style -->
+    <link rel="stylesheet" type="text/css" href="Resources/css/custom/main.css" />
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Begin Header -->
+    <nav class="navbar navbar-expand bg-info fixed-top position-sticky text-right">
+        <ul id="myNavbar" dir="rtl" class="nav navbar-nav d-none d-md-flex">
+            <!--username of addmin-->
+            <li class="dropdown dropdown-user nav-item">
+                <a class="dropdown-toggle nav-link dropdown-user-link text-white" href="#" data-toggle="dropdown">
+                    <span class="ml-1">مرجبا
+                        <span class="user-name text-bold-700"> Sallam </span>
+                    </span>
+                    <span class="avatar avatar-online">
+                        <img style="height: 35px;" src="Resources/images/icons/ico.jpg" alt="avatar"
+                            class="rounded-circle" />
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="">
+                        <i class="fas fa-user"></i>
+                        تعديل الملف الشحصي
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="">
+                        <i class="fas fa-sign-out-alt"></i>
+                        تسجيل الخروج
+                    </a>
+                </div>
+            </li>
+            <!--notification-->
+            <li class="dropdown dropdown-notification nav-item">
+                <a class="nav-link nav-link-label text-white" href="#" data-toggle="dropdown" title="Notifications"
+                    aria-expanded="false">
+                    <i class="far fa-bell"></i>
+                    <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                    <li class="dropdown-menu-header text-right">
+                        <h6 class="dropdown-header m-0">
+                            <span class="grey darken-2">الأشعارات</span>
+                        </h6>
+                        <span class="notification-tag badge badge-default badge-danger float-left m-0">5 New</span>
+                    </li>
+                    <li class="scrollable-container media-list w-100 ps-container ps-theme-dark"
+                        data-ps-id="d2978418-cc8e-592e-dcf4-00c2a8511f6d">
+                        <a href="javascript:void(0)">
+                            <div class="media">
+                                <div class="media-left align-self-center"><i
+                                        class="ft-plus-square icon-bg-circle bg-cyan"></i></div>
+                                <div class="media-body text-right">
+                                    <h6 class="media-heading">أشعارات جديدة!</h6>
+                                    <p class="notification-text font-small-3 text-muted">
+                                        عرض الأشعارات الجديدة
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <!--natification 1-->
+                        <a href="#">
+                            <div class="media">
+                                <div class="media-left align-self-center"><i
+                                        class="ft-download-cloud icon-bg-circle bg-red bg-darken-1"></i></div>
+                                <div class="media-body text-right">
+                                    <h6 class="media-heading red darken-1">أشعار رقم 1</h6>
+                                    <p class="notification-text font-small-3 text-muted">معلومات عن الاشعار</p>
+                                    <small>
+                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Five
+                                            hour ago
+                                        </time>
+                                    </small>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="#">عرض كل
+                            الأشعارات</a>
+                    </li>
+                </ul>
+            </li>
+            <!--Messages-->
+            <li class="dropdown dropdown-notification nav-item">
+                <a class="nav-link nav-link-label text-white" href="#" data-toggle="dropdown" aria-expanded="false">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                    <li class="dropdown-menu-header text-right">
+                        <h6 class="dropdown-header m-0">
+                            <span class="grey darken-2">الرسائل</span>
+                        </h6>
+                    </li>
+                    <li class="scrollable-container media-list w-100 ps-container ps-theme-dark ps-active-y"
+                        data-ps-id="8118129b-a2d7-99b0-508d-9a0ed092bfef">
+                        <!--message 1-->
+                        <a href="#">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                        <img class="rounded-circle" src="Resources/images/icons/ico.jpg" width="35"
+                                            height="40" alt="avatar">
+                                    </span>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h6 class="media-heading">رسالة من الزمان</h6>
+                                    <p class="notification-text font-small-3 text-muted">أحذرني فقولي مضحك و فعلي مبكي..
+                                    </p>
+                                    <small>
+                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">
+                                            Today
+                                        </time>
+                                    </small>
+                                </div>
+                            </div>
+                        </a>
+                        <!--message 2-->
+                        <a href="#">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                        <img class="rounded-circle" src="Resources/images/icons/ico.jpg" width="35"
+                                            height="40" alt="avatar">
+                                    </span>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h6 class="media-heading">رسالة من الزمان</h6>
+                                    <p class="notification-text font-small-3 text-muted">أحذرني فقولي مضحك و فعلي مبكي..
+                                    </p>
+                                    <small>
+                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">
+                                            Today
+                                        </time>
+                                    </small>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu-footer">
+                        <a class="dropdown-item text-muted text-center" href="#">Read all
+                            messages
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!--search-->
+            <form class="form-inline" action="#">
+                <input class="form-control mr-sm-2" name="search" type="text" placeholder="بحث عن ..">
+                <select name="searchAbout" class="custom-select">
+                    <option selected>طالب</option>
+                    <option>شيخ</option>
+                    <option>مستوي</option>
+                </select>
+                <button class="btn btn-warning" type="submit">
+                    <i class="fas fa-search"></i>
+                    <span class="d-xs-inline d-md-none">بحث</span>
+                </button>
+            </form>
+        </ul>
+        <span class="navbar-brand m-auto h1 text-white">أكاديمية أهل القران الكريم</span>
+        <ul class="nav navbar-nav ml-auto float-right">
+            <li class="nav-item text-right">
+                <button data-toggle="tooltip" title="hide sidebar!" value="hide" id="sidebar-toggle"
+                    class="btn btn-light nav-link  hidden-xs is-active text-white">
+                    <i class="fas fa-bars text-dark"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- End  Header -->
+    <!-- The start of  wrapper -->
+    <div id="wrapper" dir="rtl">
+        <!--start of slidebar-->
+        <nav id="sidebar" class="text-right animate__animated ">
+            <h4 class="text-center sidebarHeader">لوحة التحكم</h4>
+            <!--md and less screens-->
+            <div class="d-block d-md-none">
+                <!--1-->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#item1-md">
+                        &nbsp;&nbsp;
+                        <span class="ml-1">مرجبا
+                            <span class="user-name text-bold-700"> Sallam </span>
+                        </span>
+                        <span class="avatar avatar-online">
+                            <img style="height: 35px;" src="Resources/images/icons/ico.jpg" alt="avatar"
+                                class="rounded-circle" />
+                        </span>
+                    </a>
+                </div>
+                <div id="item1-md" class="collapse" data-parent="#sidebar">
+                    <div class="card-body text-right">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-user-cog"></i>
+                                    &nbsp;&nbsp;
+                                    تعديل الملف الشحصي
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    &nbsp;&nbsp;
+                                    تسجيل خروج
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--2-->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#item2-md">
+                        <i class="fas fa-bell"></i>
+                        &nbsp;&nbsp;
+                        الأشعارات
+                    </a>
+                </div>
+                <div id="item2-md" class="collapse" data-parent="#sidebar">
+                    <div class="card-body text-right">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-bell"></i>
+                                    &nbsp;&nbsp;
+                                    عرض الأشعارات
+                                    &nbsp;&nbsp;
+                                    <span class="notification-tag badge badge-default badge-danger float-left m-0">
+                                        5 New
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--3-->
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#item3-md">
+                        <i class="far fa-envelope"></i>
+                        &nbsp;&nbsp;
+                        الرسائل
+                    </a>
+                </div>
+                <div id="item3-md" class="collapse" data-parent="#sidebar">
+                    <div class="card-body text-right">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-envelope"></i>
+                                    &nbsp;&nbsp;
+                                    عرض الرسائل
+                                    &nbsp;&nbsp;
+                                    <span class="notification-tag badge badge-default badge-danger float-left m-0">
+                                        5 New
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--4-->
+                <div class="card-header">
+                    <a class="card-link" href="#">
+                        <i class="fas fa-search"></i>
+                        &nbsp;&nbsp;
+                        خدمة البحث
+                    </a>
+                </div>
+                <!--5-->
+            </div>
+            <!--item 1-->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item1">
+                    <i class="fas fa-tachometer-alt"></i>
+                    &nbsp;&nbsp;
+                    أكاديمية أهل القران
+                </a>
+            </div>
+            <div id="item1" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                &nbsp;&nbsp;
+                                الصفحة الرئيسية
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-barcode"></i>
+                                &nbsp;&nbsp;
+                                عن الأكاديمية
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 2-->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item2">
+                    <i class="fas fa-users-cog"></i>
+                    &nbsp;&nbsp;
+                    المشرفين
+                </a>
+            </div>
+            <div id="item2" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-users"></i>
+                                &nbsp;&nbsp;
+                                عرض المشرفين
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                &nbsp;&nbsp;
+                                أضافة مشرف
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 3 shieck -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item3">
+                    <i class="fas fa-graduation-cap"></i>
+                    &nbsp;&nbsp;
+                    المشايخ المحفظين
+                </a>
+            </div>
+            <div id="item3" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-users"></i>
+                                &nbsp;&nbsp;
+                                عرض المشايخ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                &nbsp;&nbsp;
+                                أضافة شيخ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 4 students -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item4">
+                    <i class="fas fa-users"></i>
+                    &nbsp;&nbsp;
+                    الطلاب
+                </a>
+            </div>
+            <div id="item4" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-users"></i>
+                                &nbsp;&nbsp;
+                                عرض الطلاب
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                &nbsp;&nbsp;
+                                أضافة طالب
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 5 news -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item5">
+                    <i class="fas fa-newspaper"></i>
+                    &nbsp;&nbsp;
+                    أخبار الأكاديمية
+                </a>
+            </div>
+            <div id="item5" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-newspaper"></i>
+                                &nbsp;&nbsp;
+                                عرض الأخبار
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-plus-circle"></i>
+                                &nbsp;&nbsp;
+                                أضافة خبر
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 6 news -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item6">
+                    <i class="fas fa-suitcase"></i>
+                    &nbsp;&nbsp;
+                    الأنظمة التدريبية
+                </a>
+            </div>
+            <div id="item6" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-suitcase"></i>
+                                &nbsp;&nbsp;
+                                عرض الأنظمة
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-plus-circle"></i>
+                                &nbsp;&nbsp;
+                                أضافة نظام تدريبي
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 7 news -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item7">
+                    <i class="fab fa-intercom"></i>
+                    &nbsp;&nbsp;
+                    غرف التسميع
+                </a>
+            </div>
+            <div id="item7" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fab fa-intercom"></i>
+                                &nbsp;&nbsp;
+                                عرض غرف التسميع
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-plus-circle"></i>
+                                &nbsp;&nbsp;
+                                أضافة غرفة
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 8 news -->
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#item8">
+                    <i class="fas fa-envelope"></i>
+                    &nbsp;&nbsp;
+                    الرسائل
+                </a>
+            </div>
+            <div id="item8" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-envelope"></i>
+                                &nbsp;&nbsp;
+                                عرض الرسائل
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--item 9 news -->
+            <div class="card-header Itemheader">
+                <a class="card-link" data-toggle="collapse" href="#item9">
+                    <i class="fas fa-cogs"></i>
+                    &nbsp;&nbsp;
+                    الأعدادات
+                </a>
+            </div>
+            <div id="item9" class="collapse" data-parent="#sidebar">
+                <div class="card-body text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-cogs"></i>
+                                &nbsp;&nbsp;
+                                عرض الأعدادات
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end of slidebar-->
+        <!--start of content-->
+        <div id="content">
+            <!--begain of cards-->
+            <div class="row shortCards">
+                <div class="col-xl-4 col-12 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fas fa-users"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد الطلاب</h4>
+                                        <small>و</small>
+                                        <h6 class="text-muted">نسبة الاقبال</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                        <h6 class="success darken-4">31% <i class="la la-arrow-up"></i></h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد المشايخ</h4>
+                                        <small>و</small>
+                                        <h6 class="text-muted">نسبة الاقبال</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                        <h6 class="success darken-4">31% <i class="la la-arrow-up"></i></h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fas fa-users-cogs"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد المشرفين</h4>
+                                        <small>في</small>
+                                        <h6 class="text-muted">الأكاديمية</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 mt-2 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fas fa-suitcase"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد الأنظمة</h4>
+                                        <small>التدريبية في</small>
+                                        <h6 class="text-muted">الأكاديمية</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 mt-2 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fab fa-intercom"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد غرف</h4>
+                                        <h6>التسميع</h6>
+                                        <small>فى</small>
+                                        <h6 class="text-muted">الأكاديمية</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-12 mt-2 hvr-float-shadow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body pb-0">
+                                <div class="row text-right">
+                                    <div class="col-2">
+                                        <h1>
+                                            <i class="fas fa-envelope"></i>
+                                        </h1>
+                                    </div>
+                                    <div class="col-5 pl-2">
+                                        <h4>عدد الرسائل</h4>
+                                        <small>الواردة الى</small>
+                                        <h6 class="text-muted">الأكاديمية</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h4>9,980</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-outline-info mt-3 mb-2">
+                                            للمزيد من المعلومات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of cards-->
+            <!--start of summary info table-->
+            <div class="row  mt-5">
+                <div class="col-12 col-xl-6">
+                    <div class="card text-right">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                <i class="far fa-newspaper"></i>
+                                &nbsp; أحدث الأخبار
+                            </h4>
+                            <p class="text-muted">أحدث عشر أخبار</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table table-de mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>العنوان</th>
+                                            <th>التاريخ</th>
+                                            <th>التفاصيل</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>فتح باب التسجيل لمستوي جديد</td>
+                                            <td>12-11-2021</td>
+                                            <td>
+                                                <a class="btn btn-info" href="#">
+                                                    التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>فتح باب التسجيل لمستوي جديد</td>
+                                            <td>12-11-2021</td>
+                                            <td>
+                                                <a class="btn btn-info" href="#">
+                                                    التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>فتح باب التسجيل لمستوي جديد</td>
+                                            <td>12-11-2021</td>
+                                            <td>
+                                                <a class="btn btn-info" href="#">
+                                                    التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>فتح باب التسجيل لمستوي جديد</td>
+                                            <td>12-11-2021</td>
+                                            <td>
+                                                <a class="btn btn-info" href="#">
+                                                    التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>فتح باب التسجيل لمستوي جديد</td>
+                                            <td>12-11-2021</td>
+                                            <td>
+                                                <a class="btn btn-info" href="#">
+                                                    التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="card text-right">
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                <i class="far fa-envelope"></i>&nbsp;&nbsp;
+                                أحدث الرسائل الواردة لأكاديمية
+                            </h4>
+                            <p class="text-muted">أخر عشر رسائل ورودأ الينا</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table table-de mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>الراسل</th>
+                                            <th>الموضوع</th>
+                                            <th>التفاصيل</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ss@ss.com</td>
+                                            <td>اقتراح</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">التفاصيل</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ss@ss.com</td>
+                                            <td>اقتراح</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">التفاصيل</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ss@ss.com</td>
+                                            <td>اقتراح</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">التفاصيل</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ss@ss.com</td>
+                                            <td>اقتراح</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">التفاصيل</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ss@ss.com</td>
+                                            <td>اقتراح</td>
+                                            <td>
+                                                <a href="#" class="btn btn-info">التفاصيل</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of summary info table-->
+            <!--footer-->
+            <div class="row text-center mt-5 mb-4" dir="ltr">
+                <div class="col-5"></div>
+                Design & Created by <a href="mail:sallamrady@gmail.com">@SallamRady</a>
+            </div>
+
+        </div>
+        <!--end of content-->
+    </div>
+    <!-- The End of  wrapper -->
+
+    <!-- import js script -->
+    <script src="Resources/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Resources/bootstrap/js/bootstrap.bundle.js"></script>
+    <!--custom script file-->
+    <script src="Resources/js/mainScript.js"></script>
+</body>
+
+</html>
